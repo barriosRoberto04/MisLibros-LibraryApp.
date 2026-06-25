@@ -53,13 +53,13 @@ fun SubmitReportScreen(
     val userProfile = authViewModel.currentUserProfile
     val isAdmin = userProfile?.role == "ADMIN"
 
-    // --- ESTADOS DEL REPORTANTE ---
+    // ESTADOS DEL REPORTANTE
     var reporterName by remember { mutableStateOf("") }
     var reporterApellidos by remember { mutableStateOf("") }
     var reporterEmail by remember { mutableStateOf("") }
     var reporterPhone by remember { mutableStateOf("") }
 
-    // --- ESTADOS DEL REPORTE ---
+    // ESTADOS DEL REPORTE
     var subject by remember { mutableStateOf("") }
     var description by remember { mutableStateOf("") }
     var reportStatus by remember { mutableStateOf("Solicitud") }
@@ -303,9 +303,7 @@ fun SubmitReportScreen(
                         Spacer(Modifier.height(28.dp))
 
 
-                        // ══════════════════════════════════════
-                        //   BOTONES
-                        // ══════════════════════════════════════
+                        // BOTONES
                         Button(
                             onClick = {
                                 // ── Validaciones ──

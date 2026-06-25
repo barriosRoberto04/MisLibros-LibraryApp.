@@ -1,4 +1,4 @@
-package com.example.mislibros.ui.screens.user
+﻿package com.example.mislibros.ui.screens.user
 
 import android.widget.Toast
 import androidx.compose.foundation.background
@@ -56,7 +56,7 @@ fun QueryReportsScreen(
     val isAdmin = userProfile?.role == "ADMIN"
     val currentUserId = userProfile?.userId ?: ""
 
-    // --- ESTADOS DE REPORTES ---
+    // ESTADOS DE REPORTES
     var reportsList by remember { mutableStateOf<List<ReportModel>>(emptyList()) }
     var filterStatus by remember { mutableStateOf("SOLICITUD") }
     var isLoading by remember { mutableStateOf(true) }
@@ -88,7 +88,7 @@ fun QueryReportsScreen(
         databaseRef.addValueEventListener(listener)
     }
 
-    // --- DIÁLOGOS DE DETALLE / EDICIÓN ---
+    // DIÁLOGOS DE DETALLE / EDICIÓN
     var selectedReport by remember { mutableStateOf<ReportModel?>(null) }
     var newStatus by remember { mutableStateOf("-------") }
     var isSavingStatus by remember { mutableStateOf(false) }
@@ -248,7 +248,7 @@ fun QueryReportsScreen(
         ) {
             Spacer(modifier = Modifier.height(16.dp))
 
-            // --- FILTROS DE REPORTES (Chip selector) ---
+            // FILTROS DE REPORTES (Chip selector)
             Row(
                 modifier = Modifier
                     .fillMaxWidth()

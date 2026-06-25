@@ -210,7 +210,7 @@ fun AdminRegisterUserScreen(
     val scrollState = rememberScrollState()
     val focusManager = LocalFocusManager.current
 
-    // --- ESTADOS DEL FORMULARIO ---
+    // ESTADOS DEL FORMULARIO
     val isEditMode = userToEdit != null
 
     var nombre by remember { mutableStateOf(userToEdit?.nombre ?: "") }
@@ -357,9 +357,7 @@ fun AdminRegisterUserScreen(
 
                         Spacer(modifier = Modifier.height(16.dp))
 
-                        // ==========================================
-                        //  SECCIÓN: DATOS PERSONALES
-                        // ==========================================
+                        // SECCIÓN: DATOS PERSONALES
                         SectionTitle(text = stringResource(id = R.string.personal_data_section))
 
                         PremiumTextField(

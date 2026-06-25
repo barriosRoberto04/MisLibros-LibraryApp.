@@ -70,7 +70,7 @@ fun UserProfileScreen(
         }
     }
 
-    // --- CARGA DE TEXTOS DESDE STRINGS.XML ---
+    // CARGA DE TEXTOS DESDE STRINGS.XML
     val imageLoadError = stringResource(id = R.string.image_load_error)
     val cameraPermissionDenied = stringResource(id = R.string.camera_permission_denied)
     val onlyLettersWarningFormat = stringResource(id = R.string.only_letters_warning)
@@ -78,7 +78,7 @@ fun UserProfileScreen(
     val zipCodeLengthWarning = stringResource(id = R.string.zip_code_length_warning)
     val phoneLengthWarning = stringResource(id = R.string.phone_length_warning)
 
-    // --- ESTADOS DE IMAGEN Y DIÁLOGO ---
+    // ESTADOS DE IMAGEN Y DIÁLOGO
     var fotoBitmap by remember { mutableStateOf<Bitmap?>(null) }
     var mostrarDialogoOrigen by remember { mutableStateOf(false) }
 
@@ -146,7 +146,7 @@ fun UserProfileScreen(
         )
     }
 
-    // --- ESTADOS DE CAMPOS ---
+    // ESTADOS DE CAMPOS
     var nombre by remember { mutableStateOf(userProfile?.nombre ?: "") }
     var apellidos by remember { mutableStateOf(userProfile?.apellidos ?: "") }
     var telefono by remember { mutableStateOf(formatoTelefono(userProfile?.telefono ?: "")) }
@@ -263,9 +263,7 @@ fun UserProfileScreen(
 
                         Spacer(modifier = Modifier.height(24.dp))
 
-                        // ==========================================
-                        //  SECCIÓN: DATOS PERSONALES
-                        // ==========================================
+                        // SECCIÓN: DATOS PERSONALES
                         SectionTitle(text = stringResource(id = R.string.personal_data_section))
 
                         PremiumTextField(
@@ -308,9 +306,7 @@ fun UserProfileScreen(
 
                         Spacer(modifier = Modifier.height(20.dp))
 
-                        // ==========================================
-                        //  SECCIÓN: DIRECCIÓN
-                        // ==========================================
+                        // SECCIÓN: DIRECCIÓN
                         SectionTitle(text = stringResource(id = R.string.address_section))
 
                         PremiumTextField(
@@ -379,11 +375,9 @@ fun UserProfileScreen(
 
                         Spacer(modifier = Modifier.height(28.dp))
 
-                        // ==========================================
                         // ️ BOTONES DE ACCIÓN (CANCELAR Y GUARDAR)
-                        // ==========================================
                         // BOTONES: GUARDAR / CANCELAR
-                        // ==========================================
+                        // 
 
                         // GUARDAR
                         Button(

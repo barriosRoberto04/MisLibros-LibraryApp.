@@ -70,7 +70,7 @@ fun AdminRegisterBookScreen(
     val userProfile = authViewModel.currentUserProfile
     val logoutSuccessText = stringResource(id = R.string.logout_success)
 
-    // --- CARGA DE TEXTOS DESDE STRINGS.XML ---
+    // CARGA DE TEXTOS DESDE STRINGS.XML
     val titleRegister = stringResource(id = R.string.book_title_register)
     val titleEdit = stringResource(id = R.string.book_title_edit)
     val photoDialogTitle = stringResource(id = R.string.book_photo_title)
@@ -85,7 +85,7 @@ fun AdminRegisterBookScreen(
     val errorStock = stringResource(id = R.string.book_error_stock)
     val cancelBtnText = stringResource(id = R.string.cancel_button)
 
-    // --- ESTADOS DE IMAGEN ---
+    // ESTADOS DE IMAGEN
     var fotoBitmap by remember { mutableStateOf<Bitmap?>(null) }
     var authorFotoBitmap by remember { mutableStateOf<Bitmap?>(null) }
     var isPickingAuthorFoto by remember { mutableStateOf(false) }
@@ -133,7 +133,7 @@ fun AdminRegisterBookScreen(
         else Toast.makeText(context, cameraPermissionDenied, Toast.LENGTH_SHORT).show()
     }
 
-    // --- ESTADOS DEL FORMULARIO ---
+    // ESTADOS DEL FORMULARIO
     val isEditMode = bookToEdit != null
     var title by remember { mutableStateOf(bookToEdit?.title ?: "") }
     var author by remember { mutableStateOf(bookToEdit?.author ?: "") }
@@ -414,7 +414,7 @@ fun AdminRegisterBookScreen(
 
                         Spacer(modifier = Modifier.height(28.dp))
 
-                        // --- BOTÓN REGISTRAR / GUARDAR ---
+                        // BOTÓN REGISTRAR / GUARDAR
                         Button(
                             onClick = {
                                 if (title.trim().isEmpty() || author.trim().isEmpty() || publisher.trim().isEmpty() ||
@@ -464,7 +464,7 @@ fun AdminRegisterBookScreen(
 
                         Spacer(modifier = Modifier.height(12.dp))
 
-                        // --- BOTÓN CANCELAR ---
+                        // BOTÓN CANCELAR
                         Button(
                             onClick = {
                                 title = ""

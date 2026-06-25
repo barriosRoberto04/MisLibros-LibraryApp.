@@ -1,4 +1,4 @@
-package com.example.mislibros.ui.screens.user
+﻿package com.example.mislibros.ui.screens.user
 
 import android.app.DatePickerDialog
 import android.widget.Toast
@@ -55,7 +55,7 @@ fun QueryLoansScreen(
     val isAdmin = userProfile?.role == "ADMIN"
     val currentUserId = userProfile?.userId ?: ""
 
-    // --- ESTADOS DE PRÉSTAMOS ---
+    // ESTADOS DE PRÉSTAMOS
     var loansList by remember { mutableStateOf<List<BookLoanModel>>(emptyList()) }
     var booksMap by remember { mutableStateOf<Map<String, String>>(emptyMap()) }
     var isLoading by remember { mutableStateOf(true) }
@@ -107,7 +107,7 @@ fun QueryLoansScreen(
         databaseRef.addValueEventListener(listener)
     }
 
-    // --- DIÁLOGO DE EDICIÓN PARA ADMIN ---
+    // DIÁLOGO DE EDICIÓN PARA ADMIN
     var selectedLoanToEdit by remember { mutableStateOf<BookLoanModel?>(null) }
     var newStatus by remember { mutableStateOf("PENDIENTE") }
     var newDeliveryDate by remember { mutableStateOf("") }
@@ -325,7 +325,7 @@ fun QueryLoansScreen(
         ) {
             Spacer(modifier = Modifier.height(8.dp))
 
-            // --- FILTROS DE PRÉSTAMOS (Chip selector) ---
+            // FILTROS DE PRÉSTAMOS (Chip selector)
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -351,7 +351,7 @@ fun QueryLoansScreen(
                 }
             }
 
-            // --- LISTADO DE PRÉSTAMOS ---
+            // LISTADO DE PRÉSTAMOS
             val displayList = loansList.filter {
                 it.status == filterStatus
             }.sortedByDescending { it.loanDate }

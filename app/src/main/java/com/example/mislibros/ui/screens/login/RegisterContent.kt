@@ -1,4 +1,4 @@
-package com.example.mislibros.ui.screens.login
+﻿package com.example.mislibros.ui.screens.login
 
 import android.widget.Toast
 import androidx.compose.foundation.background
@@ -88,7 +88,7 @@ fun RegisterContent(
     val passwordLengthWarning = stringResource(id = R.string.password_length_warning)
     val passwordsMismatchWarning = stringResource(id = R.string.passwords_mismatch_warning)
 
-    // --- ESTADOS DEL FORMULARIO ---
+    // ESTADOS DEL FORMULARIO
     var nombre by remember { mutableStateOf("") }
     var apellidoPaterno by remember { mutableStateOf("") }
     var apellidoMaterno by remember { mutableStateOf("") }

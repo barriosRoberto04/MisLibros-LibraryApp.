@@ -1,4 +1,4 @@
-package com.example.mislibros.ui.screens.user
+﻿package com.example.mislibros.ui.screens.user
 
 import android.app.DatePickerDialog
 import android.widget.Toast
@@ -59,7 +59,7 @@ fun BookLoanScreen(
     val userProfile = authViewModel.currentUserProfile
     val isAdmin = userProfile?.role == "ADMIN"
 
-    // --- ESTADOS DEL SOLICITANTE ---
+    // ESTADOS DEL SOLICITANTE
     var nombre by remember { mutableStateOf("") }
     var apellidos by remember { mutableStateOf("") }
     var telefono by remember { mutableStateOf("") }
@@ -75,7 +75,7 @@ fun BookLoanScreen(
         }
     }
 
-    // --- LIBROS DESDE FIREBASE ---
+    // LIBROS DESDE FIREBASE
     var allBooks by remember { mutableStateOf<List<BookModel>>(emptyList()) }
     var categories by remember { mutableStateOf<List<String>>(emptyList()) }
     var filteredBooks by remember { mutableStateOf<List<BookModel>>(emptyList()) }
@@ -105,7 +105,7 @@ fun BookLoanScreen(
             })
     }
 
-    // --- SELECCIÓN DE LIBRO ---
+    // SELECCIÓN DE LIBRO
     var selectedCategory by remember { mutableStateOf("-------") }
     var selectedBookTitle by remember { mutableStateOf("-------") }
     var selectedBook by remember { mutableStateOf<BookModel?>(null) }
@@ -134,7 +134,7 @@ fun BookLoanScreen(
         }
     }
 
-    // --- DETALLES DEL PRÉSTAMO ---
+    // DETALLES DEL PRÉSTAMO
     var loanDate by remember { mutableStateOf("") }
     var durationWeeks by remember { mutableStateOf("1 semana") }
     val durationOptions = listOf("1 semana", "2 semanas", "3 semanas")
@@ -153,7 +153,7 @@ fun BookLoanScreen(
         "${userProfile?.nombre ?: ""} $apels".trim()
     } else ""
 
-    // --- DATE PICKERS ---
+    // DATE PICKERS
     val calendar = Calendar.getInstance()
 
     val loanDatePicker = DatePickerDialog(
@@ -211,9 +211,7 @@ fun BookLoanScreen(
                             horizontalAlignment = Alignment.CenterHorizontally
                         ) {
 
-                            // ══════════════════════════════════════
-                            //   SECCIÓN 1: DATOS DEL SOLICITANTE
-                            // ══════════════════════════════════════
+                            // SECCIÓN 1: DATOS DEL SOLICITANTE
                             SectionHeader(text = "Datos del Solicitante")
 
                             PremiumTextField(
@@ -274,9 +272,7 @@ fun BookLoanScreen(
                             )
                             Spacer(Modifier.height(24.dp))
 
-                            // ══════════════════════════════════════
-                            //   SECCIÓN 2: SELECCIÓN DE LIBRO
-                            // ══════════════════════════════════════
+                            // SECCIÓN 2: SELECCIÓN DE LIBRO
                             SectionHeader(text = "Libro Solicitado")
 
                             PremiumDropdownField(
@@ -322,9 +318,7 @@ fun BookLoanScreen(
                                 Spacer(Modifier.height(12.dp))
                             }
 
-                            // ══════════════════════════════════════
-                            //   SECCIÓN 3: DETALLES DEL PRÉSTAMO
-                            // ══════════════════════════════════════
+                            // SECCIÓN 3: DETALLES DEL PRÉSTAMO
                             SectionHeader(text = "Detalles del Préstamo")
 
                             // Campos exclusivos del Administrador (nombre prestador va de primero)
@@ -433,9 +427,7 @@ fun BookLoanScreen(
                                 Spacer(Modifier.height(24.dp))
                             }
 
-                            // ══════════════════════════════════════
-                            //   BOTONES
-                            // ══════════════════════════════════════
+                            // BOTONES
                             Button(
                                 onClick = {
                                     val currentBook = selectedBook

@@ -1,4 +1,4 @@
-package com.example.mislibros
+﻿package com.example.mislibros
 
 import android.os.Bundle
 import android.widget.Toast
@@ -399,7 +399,7 @@ class MainActivity : ComponentActivity() {
                                     val newPassword = dataMap["password"] ?: ""
 
                                     if (userToEdit != null) {
-                                        // --- MODO EDICIÓN DE USUARIO ---
+                                        // MODO EDICIÓN DE USUARIO
                                         isRegistering = true
                                         val userId = userToEdit!!.userId
 
@@ -518,7 +518,7 @@ class MainActivity : ComponentActivity() {
                                             onImageUploadFinished(userToEdit!!.imageUrl)
                                         }
                                     } else {
-                                        // --- MODO NUEVO REGISTRO ---
+                                        // MODO NUEVO REGISTRO
                                         val password = dataMap["password"] ?: ""
                                         if (email.isNotBlank() && password.isNotBlank() && bitmap != null) {
                                             isRegistering = true

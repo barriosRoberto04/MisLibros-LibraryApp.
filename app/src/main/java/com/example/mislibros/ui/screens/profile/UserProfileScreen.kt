@@ -75,7 +75,7 @@ fun UserProfileScreen(
         return
     }
 
-    // --- ESTADOS LOCALES DEL PERFIL ---
+    // ESTADOS LOCALES DEL PERFIL
     var nombre by remember { mutableStateOf(userProfile.nombre) }
     var apellidos by remember { mutableStateOf(userProfile.apellidos) }
     var telefono by remember { mutableStateOf(userProfile.telefono) }
@@ -277,9 +277,7 @@ fun UserProfileScreen(
                 .verticalScroll(scrollState),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            // ==========================================
-            //  SECCIÓN SUPERIOR: CABECERA Y AVATAR
-            // ==========================================
+            // SECCIÓN SUPERIOR: CABECERA Y AVATAR
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
