@@ -1,4 +1,4 @@
-﻿package com.example.mislibros.ui.screens.user
+package com.example.mislibros.ui.screens.user
 
 import android.app.DatePickerDialog
 import android.widget.Toast
@@ -308,8 +308,8 @@ fun BookLoanScreen(
                                 )
                                 Spacer(Modifier.height(6.dp))
                                 Text(
-                                    text = if (stockVal > 0) "✓ Disponible — Stock: $stockVal unidades"
-                                    else "✗ Sin ejemplares disponibles para préstamo",
+                                    text = if (stockVal > 0) "Disponible - Stock: $stockVal unidades"
+                                    else "Sin ejemplares disponibles para prestamo",
                                     color = if (stockVal > 0) Color(0xFF4CAF50) else Color(0xFFE53935),
                                     fontWeight = FontWeight.Bold,
                                     fontSize = 13.sp,
@@ -432,7 +432,7 @@ fun BookLoanScreen(
                                 onClick = {
                                     val currentBook = selectedBook
 
-                                    // ── Validaciones ──
+                                    // Validaciones
                                     // Validar campos vacíos del solicitante
                                     if (nombre.isBlank() || apellidos.isBlank() || telefono.isBlank() || email.isBlank()) {
                                         Toast.makeText(context, "Por favor, completa todos los datos del solicitante.", Toast.LENGTH_SHORT).show()
@@ -524,7 +524,7 @@ fun BookLoanScreen(
                                                     message = "Solicita el libro '${currentBook.title}' por $durationWeeks.",
                                                     timestamp = now,
                                                     read = false,
-                                                    targetRole = "ADMIN", //<-- Indica que solo la recibira el Admin
+                                                    targetRole = "ADMIN", // <-- Indica que solo la recibira el Admin
                                                     userImageUrl = userProfile?.imageUrl ?: "", // Foto de perfil del usuario
                                                     bookImageUrl = currentBook.imageUrl // Portada del libro solicitado
                                                 )

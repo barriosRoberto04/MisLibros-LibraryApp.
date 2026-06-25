@@ -1,4 +1,4 @@
-﻿package com.example.mislibros.ui.screens.user
+package com.example.mislibros.ui.screens.user
 
 import android.app.DatePickerDialog
 import android.widget.Toast
@@ -132,7 +132,7 @@ fun SubmitReportScreen(
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
 
-                        // ✉️ Encabezado Estilo Correo
+                        // Encabezado Estilo Correo
                         SectionHeader(text = if (isAdmin) "Datos" else "Estructura del Reporte")
 
                         if (isAdmin) {
@@ -235,7 +235,7 @@ fun SubmitReportScreen(
                         }
                         Spacer(Modifier.height(24.dp))
 
-                        //  Contenido del Correo / Reporte
+                        // Contenido del Correo / Reporte
                         SectionHeader(text = "Detalles del Mensaje")
 
                         // Fecha del Reporte (va antes del Asunto)
@@ -306,7 +306,7 @@ fun SubmitReportScreen(
                         // BOTONES
                         Button(
                             onClick = {
-                                // ── Validaciones ──
+                                // Validaciones
                                 if (reporterName.isBlank() || reporterApellidos.isBlank() || reporterEmail.isBlank() || reporterPhone.isBlank() || subject.isBlank() || description.isBlank()) {
                                     Toast.makeText(context, context.getString(R.string.report_fields_error), Toast.LENGTH_SHORT).show()
                                     return@Button

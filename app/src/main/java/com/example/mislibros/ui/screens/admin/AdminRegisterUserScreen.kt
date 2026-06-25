@@ -297,7 +297,7 @@ fun AdminRegisterUserScreen(
                             .padding(24.dp),
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
-                        //  SECCIÓN: FOTOGRAFÍA (CÍRCULO PREMIUM)
+                        // SECCIÓN: FOTOGRAFÍA (CÍRCULO PREMIUM)
                         Box(
                             modifier = Modifier
                                 .size(100.dp)
@@ -451,7 +451,7 @@ fun AdminRegisterUserScreen(
 
                         Spacer(modifier = Modifier.height(20.dp))
 
-                        //  SECCIÓN: INFORMACIÓN DE CONTACTO
+                        // SECCIÓN: INFORMACIÓN DE CONTACTO
 
                         SectionTitle(text = stringResource(id = R.string.contact_info_section))
 

@@ -384,7 +384,7 @@ fun UserProfileScreen(
                 verticalArrangement = Arrangement.spacedBy(16.dp)
             ) {
 
-                //  TARJETA 1: DATOS PERSONALES
+                // TARJETA 1: DATOS PERSONALES
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(24.dp),
@@ -446,7 +446,7 @@ fun UserProfileScreen(
                     }
                 }
 
-                //  TARJETA 2: DIRECCIÓN
+                // TARJETA 2: DIRECCIÓN
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(24.dp),
@@ -535,7 +535,7 @@ fun UserProfileScreen(
                 Spacer(modifier = Modifier.height(8.dp))
 
 
-                //  SECCIÓN DE ACCIONES (Guardar y Cancelar)
+                // SECCIÓN DE ACCIONES (Guardar y Cancelar)
 
                 Button(
                     onClick = {

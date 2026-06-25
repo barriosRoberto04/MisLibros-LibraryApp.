@@ -208,7 +208,7 @@ fun AdminRegisterBookScreen(
                 ) {
                     Column(modifier = Modifier.fillMaxWidth().padding(24.dp), horizontalAlignment = Alignment.CenterHorizontally) {
 
-                        //  PORTADA DEL LIBRO (DENTRO DE LA CARD)
+                        // PORTADA DEL LIBRO (DENTRO DE LA CARD)
                         Box(
                             modifier = Modifier
                                 .size(width = 110.dp, height = 150.dp)

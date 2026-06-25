@@ -82,7 +82,7 @@ fun UserProfileScreen(
     var fotoBitmap by remember { mutableStateOf<Bitmap?>(null) }
     var mostrarDialogoOrigen by remember { mutableStateOf(false) }
 
-    //  Lanzador para tomar foto con la cámara
+    // Lanzador para tomar foto con la cámara
     val camaraLauncher = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.TakePicturePreview()
     ) { bitmap ->
@@ -91,7 +91,7 @@ fun UserProfileScreen(
         }
     }
 
-    // ️ Lanzador para seleccionar foto desde la galería
+    // Lanzador para seleccionar foto desde la galería
     val galeriaLauncher = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.PickVisualMedia()
     ) { uri: Uri? ->
@@ -110,7 +110,7 @@ fun UserProfileScreen(
         }
     }
 
-    //  Lanzador para solicitar permiso de la cámara
+    // Lanzador para solicitar permiso de la cámara
     val permisoCamaraLauncher = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.RequestPermission()
     ) { esAceptado ->
@@ -216,7 +216,7 @@ fun UserProfileScreen(
                             .padding(24.dp),
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
-                        //  SECCIÓN: FOTOGRAFÍA EDITABLE (CÍRCULO MÁS GRANDE ~ 130dp)
+                        // SECCIÓN: FOTOGRAFÍA EDITABLE (CÍRCULO MÁS GRANDE ~ 130dp)
                         Box(
                             modifier = Modifier
                                 .size(130.dp)
@@ -375,9 +375,9 @@ fun UserProfileScreen(
 
                         Spacer(modifier = Modifier.height(28.dp))
 
-                        // ️ BOTONES DE ACCIÓN (CANCELAR Y GUARDAR)
+                        // BOTONES DE ACCIÓN (CANCELAR Y GUARDAR)
                         // BOTONES: GUARDAR / CANCELAR
-                        // 
+                        //
 
                         // GUARDAR
                         Button(

@@ -90,7 +90,7 @@ fun BookDetailScreen(
                         activeLoanCount = activeCount
                         showActiveLoanError = true
                     } else {
-                        // ✅ Sin préstamos activos — eliminar libro
+                        // Sin préstamos activos eliminar libro
                         val dbRef = FirebaseDatabase.getInstance()
                             .getReference("libros").child(book.bookId)
                         dbRef.removeValue().addOnSuccessListener {
@@ -118,7 +118,7 @@ fun BookDetailScreen(
             })
     }
 
-    // ️ DIÁLOGO CONFIRMACIÓN DE BORRADO
+    // DIÁLOGO CONFIRMACIÓN DE BORRADO
     if (showDeleteConfirm && book != null) {
         AlertDialog(
             onDismissRequest = { showDeleteConfirm = false },
@@ -156,7 +156,7 @@ fun BookDetailScreen(
         )
     }
 
-    // ⚠️ DIÁLOGO DE ERROR — PRÉSTAMOS ACTIVOS
+    // DIÁLOGO DE ERROR PRÉSTAMOS ACTIVOS
     if (showActiveLoanError) {
         AlertDialog(
             onDismissRequest = { showActiveLoanError = false },
@@ -197,7 +197,7 @@ fun BookDetailScreen(
         )
     }
 
-    // ⏳ VERIFICANDO PRÉSTAMOS
+    // VERIFICANDO PRÉSTAMOS
     if (isCheckingLoans) {
         AlertDialog(
             onDismissRequest = {},
@@ -254,7 +254,7 @@ fun BookDetailScreen(
                 ) {
                     Spacer(modifier = Modifier.height(20.dp))
 
-                    // ️ PORTADA GRANDE
+                    // PORTADA GRANDE
                     Box(
                         modifier = Modifier
                             .fillMaxWidth()
@@ -293,7 +293,7 @@ fun BookDetailScreen(
 
                     Spacer(modifier = Modifier.height(20.dp))
 
-                    // ️ TÍTULO Y AUTOR + BOTONES ADMIN
+                    // TÍTULO Y AUTOR + BOTONES ADMIN
                     Row(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.SpaceBetween,
@@ -316,7 +316,7 @@ fun BookDetailScreen(
                             )
                         }
 
-                        // ✏️️ BOTONES ADMIN (editar / eliminar)
+                        // BOTONES ADMIN (editar / eliminar)
                         if (isAdmin) {
                             Row {
                                 IconButton(onClick = { onEditBookClick?.invoke(book) }) {
@@ -341,7 +341,7 @@ fun BookDetailScreen(
 
                     Spacer(modifier = Modifier.height(20.dp))
 
-                    //  FICHA TÉCNICA
+                    // FICHA TÉCNICA
                     Card(
                         shape = RoundedCornerShape(16.dp),
                         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
@@ -373,7 +373,7 @@ fun BookDetailScreen(
 
                     Spacer(modifier = Modifier.height(20.dp))
 
-                    // ✍️ RESEÑA
+                    // RESEÑA
                     SectionHeader(text = "Reseña del Libro")
                     Card(
                         shape = RoundedCornerShape(16.dp),
@@ -390,7 +390,7 @@ fun BookDetailScreen(
                         )
                     }
 
-                    //  ACERCA DEL AUTOR
+                    // ACERCA DEL AUTOR
                     SectionHeader(text = "Acerca del Autor")
                     Card(
                         shape = RoundedCornerShape(16.dp),
@@ -455,7 +455,7 @@ fun BookDetailScreen(
                         }
                     }
 
-                    //  BOTÓN PEDIR PRESTADO (solo usuarios normales)
+                    // BOTÓN PEDIR PRESTADO (solo usuarios normales)
                     if (!isAdmin) {
                         Button(
                             onClick = onRequestLoanClick,

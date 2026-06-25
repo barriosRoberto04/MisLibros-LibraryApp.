@@ -164,7 +164,7 @@ fun RegisterContent(
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
 
-                    //  SECCIÓN: FOTOGRAFÍA (CÍRCULO PREMIUM)
+                    // SECCIÓN: FOTOGRAFÍA (CÍRCULO PREMIUM)
                     // SECCIÓN: FOTOGRAFÍA (CÍRCULO)
                     Box(
                         modifier = Modifier
@@ -174,7 +174,7 @@ fun RegisterContent(
                         contentAlignment = Alignment.Center
                     ) {
                         if (fotoBitmap != null) {
-                            //  Se corrigieron los prefijos para usar las importaciones limpias de arriba
+                            // Se corrigieron los prefijos para usar las importaciones limpias de arriba
                             Image(
                                 bitmap = fotoBitmap.asImageBitmap(),
                                 contentDescription = stringResource(id = R.string.photo_label),
@@ -199,7 +199,7 @@ fun RegisterContent(
 
                     Spacer(modifier = Modifier.height(24.dp))
 
-                    //  SECCIÓN: DATOS PERSONALES
+                    // SECCIÓN: DATOS PERSONALES
 
                     SectionTitle(text = stringResource(id = R.string.personal_data_section))
 
@@ -234,7 +234,7 @@ fun RegisterContent(
 
                     Spacer(modifier = Modifier.height(20.dp))
 
-                    //  SECCIÓN: DIRECCIÓN
+                    // SECCIÓN: DIRECCIÓN
                     SectionTitle(text = stringResource(id = R.string.address_section))
 
                     PremiumTextField(
@@ -303,7 +303,7 @@ fun RegisterContent(
 
                     Spacer(modifier = Modifier.height(20.dp))
 
-                    //  SECCIÓN: INFORMACIÓN DE CONTACTO
+                    // SECCIÓN: INFORMACIÓN DE CONTACTO
                     SectionTitle(text = stringResource(id = R.string.contact_info_section))
 
                     PremiumTextField(
@@ -337,7 +337,7 @@ fun RegisterContent(
                     Spacer(modifier = Modifier.height(20.dp))
 
 
-                    //  SECCIÓN: SEGURIDAD
+                    // SECCIÓN: SEGURIDAD
                     SectionTitle(text = stringResource(id = R.string.security_section))
 
                     PremiumTextField(
@@ -379,7 +379,7 @@ fun RegisterContent(
                         onClick = {
                             val telefonoLimpio = telefono.replace(" ", "")
 
-                            //  REGLA DE ORO: Validar primero que NINGÚN campo esté vacío
+                            // REGLA DE ORO: Validar primero que NINGÚN campo esté vacío
                             if (fotoBitmap == null) {
                                 Toast.makeText(context, addPhotoWarning, Toast.LENGTH_SHORT).show()
                             } else if (nombre.trim().isEmpty() ||
@@ -441,7 +441,7 @@ fun RegisterContent(
 
                     Button(
                         onClick = {
-                            //  1. LIMPIAMOS TODOS LOS CAMPOS DE TEXTO
+                            // 1. LIMPIAMOS TODOS LOS CAMPOS DE TEXTO
                             nombre = ""
                             apellidoPaterno = ""
                             apellidoMaterno = ""
@@ -456,7 +456,7 @@ fun RegisterContent(
                             password = ""
                             confirmPassword = ""
 
-                            //  2. EJECUTAMOS LA ACCIÓN DE SALIR (Regresar al Login)
+                            // 2. EJECUTAMOS LA ACCIÓN DE SALIR (Regresar al Login)
                             onCancelClick()
                         },
                         shape = RoundedCornerShape(16.dp),

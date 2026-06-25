@@ -1,4 +1,4 @@
-﻿package com.example.mislibros
+package com.example.mislibros
 
 import android.os.Bundle
 import android.widget.Toast
@@ -84,7 +84,7 @@ class MainActivity : ComponentActivity() {
 
                 CompositionLocalProvider(LocalNavController provides navController) {
                     Box(modifier = Modifier.fillMaxSize()) {
-                    //  El NavHost controla cuál pantalla se ve primero (Sin transiciones/parpadeos)
+                    // El NavHost controla cuál pantalla se ve primero (Sin transiciones/parpadeos)
                     NavHost(
                         navController = navController,
                         startDestination = "splash",
@@ -93,7 +93,7 @@ class MainActivity : ComponentActivity() {
                         popEnterTransition = { EnterTransition.None },
                         popExitTransition = { ExitTransition.None }
                     ) {
-                        //  PANTALLA SPLASH (Para validar sesión y redirigir sin destellos)
+                        // PANTALLA SPLASH (Para validar sesión y redirigir sin destellos)
                         composable("splash") {
                             Box(
                                 modifier = Modifier.fillMaxSize(),
@@ -130,7 +130,7 @@ class MainActivity : ComponentActivity() {
                                 }
                             }
                         }
-                        //  PANTALLA DE LOGIN (Si ya tiene cuenta, ingresa aquí)
+                        // PANTALLA DE LOGIN (Si ya tiene cuenta, ingresa aquí)
                         composable(AppScreen.Login.route) {
                             LoginScreen(
                                 onLoginClick = { email, password ->
@@ -180,7 +180,7 @@ class MainActivity : ComponentActivity() {
                             )
                         }
 
-                        //  PANTALLA DE REGISTRO (Para crear una cuenta nueva)
+                        // PANTALLA DE REGISTRO (Para crear una cuenta nueva)
                         composable(AppScreen.Register.route) {
                             RegisterScreen(
                                 onBackToLoginClick = {
@@ -269,7 +269,7 @@ class MainActivity : ComponentActivity() {
                             )
                         }
 
-                        //  PANTALLA PRINCIPAL DEL ADMINISTRADOR (HomeAdmin)
+                        // PANTALLA PRINCIPAL DEL ADMINISTRADOR (HomeAdmin)
                         composable(AppScreen.HomeAdmin.route) {
                             AdminHomeScreen(
                                 authViewModel = authViewModel,
@@ -316,7 +316,7 @@ class MainActivity : ComponentActivity() {
                             )
                         }
 
-                        //  CONSULTA DE LIBROS (AdminQueryBooks)
+                        // CONSULTA DE LIBROS (AdminQueryBooks)
                         composable(AppScreen.AdminQueryBooks.route) {
                             AdminQueryBooksScreen(
                                 authViewModel = authViewModel,
@@ -347,7 +347,7 @@ class MainActivity : ComponentActivity() {
                             )
                         }
 
-                        //  CONSULTA DE USUARIOS (AdminQueryUsers)
+                        // CONSULTA DE USUARIOS (AdminQueryUsers)
                         composable(AppScreen.AdminQueryUsers.route) {
                             AdminQueryUsersScreen(
                                 authViewModel = authViewModel,
@@ -374,7 +374,7 @@ class MainActivity : ComponentActivity() {
                             )
                         }
 
-                        //  REGISTRO / EDICIÓN DE USUARIOS POR EL ADMINISTRADOR (AdminRegisterUser)
+                        // REGISTRO / EDICIÓN DE USUARIOS POR EL ADMINISTRADOR (AdminRegisterUser)
                         composable(AppScreen.AdminRegisterUser.route) {
                             AdminRegisterUserScreen(
                                 userToEdit = userToEdit,
@@ -632,7 +632,7 @@ class MainActivity : ComponentActivity() {
                             )
                         }
 
-                        //  REGISTRO / EDICIÓN DE LIBROS POR EL ADMINISTRADOR (AdminRegisterBook)
+                        // REGISTRO / EDICIÓN DE LIBROS POR EL ADMINISTRADOR (AdminRegisterBook)
                         composable(AppScreen.AdminRegisterBook.route) {
                             AdminRegisterBookScreen(
                                 bookToEdit = bookToEdit,
@@ -753,7 +753,7 @@ class MainActivity : ComponentActivity() {
                             )
                         }
 
-//  PANTALLA PRINCIPAL DEL USUARIO (HomeUser)
+// PANTALLA PRINCIPAL DEL USUARIO (HomeUser)
                         composable(AppScreen.HomeUser.route) {
                             UserHomeScreen(
                                 authViewModel = authViewModel,
@@ -792,7 +792,7 @@ class MainActivity : ComponentActivity() {
                             )
                         }
 
-                        //  PANTALLA DE CONSULTA DE LIBROS USUARIO (UserQueryBooks)
+                        // PANTALLA DE CONSULTA DE LIBROS USUARIO (UserQueryBooks)
                         composable(AppScreen.UserQueryBooks.route) {
                             UserQueryBooksScreen(
                                 authViewModel = authViewModel,
@@ -823,7 +823,7 @@ class MainActivity : ComponentActivity() {
                             )
                         }
 
-                        //  PANTALLA DE CONSULTA DE AUTORES USUARIO (UserQueryAuthors)
+                        // PANTALLA DE CONSULTA DE AUTORES USUARIO (UserQueryAuthors)
                         composable(AppScreen.UserQueryAuthors.route) {
                             UserQueryAuthorsScreen(
                                 authViewModel = authViewModel,
@@ -850,7 +850,7 @@ class MainActivity : ComponentActivity() {
                             )
                         }
 
-                        //  PANTALLA DE DETALLE DE AUTOR (AuthorDetail)
+                        // PANTALLA DE DETALLE DE AUTOR (AuthorDetail)
                         composable(AppScreen.AuthorDetail.route) {
                             AuthorDetailScreen(
                                 authViewModel = authViewModel,
@@ -878,7 +878,7 @@ class MainActivity : ComponentActivity() {
                             )
                         }
 
-                        //  PANTALLA DE PERFIL DE USUARIO (UserProfile)
+                        // PANTALLA DE PERFIL DE USUARIO (UserProfile)
                         composable(AppScreen.UserProfile.route) {
                             UserProfileScreen(
                                 authViewModel = authViewModel,
@@ -909,7 +909,7 @@ class MainActivity : ComponentActivity() {
                             )
                         }
 
-                        // ℹ️ PANTALLA DE INFORMACIÓN (Info)
+                        // Pantalla de informacion (Info)
                         composable(AppScreen.Info.route) {
                             InfoScreen(
                                 authViewModel = authViewModel,
@@ -937,7 +937,7 @@ class MainActivity : ComponentActivity() {
                             )
                         }
 
-                        //  PANTALLA DE CONSULTA DE LIBROS (AdminQueryBooks)
+                        // PANTALLA DE CONSULTA DE LIBROS (AdminQueryBooks)
                         composable(AppScreen.AdminQueryBooks.route) {
                             AdminQueryBooksScreen(
                                 authViewModel = authViewModel,
@@ -955,8 +955,8 @@ class MainActivity : ComponentActivity() {
                                     navController.popBackStack()
                                 },
                                 onEditBookClick = { book ->
-                                    bookToEdit = book // ← Carga el libro seleccionado en el estado dinámico (Regla 4-d)
-                                    navController.navigate(AppScreen.AdminRegisterBook.route) // ← Redirige al formulario
+                                    bookToEdit = book // Carga el libro seleccionado en el estado dinámico (Regla 4-d)
+                                    navController.navigate(AppScreen.AdminRegisterBook.route) // Redirige al formulario
                                 },
                                 onBookClick = { book ->
                                     bookToView = book
@@ -968,7 +968,7 @@ class MainActivity : ComponentActivity() {
                             )
                         }
                         
-                        //  PANTALLA DE REGISTRO / SOLICITUD DE PRÉSTAMO
+                        // PANTALLA DE REGISTRO / SOLICITUD DE PRÉSTAMO
                         composable(AppScreen.BookLoan.route) {
                             BookLoanScreen(
                                 authViewModel = authViewModel,
@@ -1001,7 +1001,7 @@ class MainActivity : ComponentActivity() {
                             )
                         }
 
-                        //  PANTALLA DE CONSULTA DE PRÉSTAMOS
+                        // PANTALLA DE CONSULTA DE PRÉSTAMOS
                         composable(AppScreen.QueryLoans.route) {
                             QueryLoansScreen(
                                 authViewModel = authViewModel,
@@ -1029,7 +1029,7 @@ class MainActivity : ComponentActivity() {
                             )
                         }
 
-                        //  PANTALLA DE NOTIFICACIONES
+                        // PANTALLA DE NOTIFICACIONES
                         composable(AppScreen.Notifications.route) {
                             NotificationsScreen(
                                 authViewModel = authViewModel,
@@ -1057,7 +1057,7 @@ class MainActivity : ComponentActivity() {
                             )
                         }
 
-                        //  PANTALLA DE CREACIÓN DE REPORTES
+                        // PANTALLA DE CREACIÓN DE REPORTES
                         composable(AppScreen.SubmitReport.route) {
                             SubmitReportScreen(
                                 authViewModel = authViewModel,
@@ -1085,7 +1085,7 @@ class MainActivity : ComponentActivity() {
                             )
                         }
 
-                        //  PANTALLA DE CONSULTA DE REPORTES
+                        // PANTALLA DE CONSULTA DE REPORTES
                         composable(AppScreen.QueryReports.route) {
                             QueryReportsScreen(
                                 authViewModel = authViewModel,
@@ -1113,7 +1113,7 @@ class MainActivity : ComponentActivity() {
                             )
                         }
 
-                        //  PANTALLA DE DETALLE DE LIBRO
+                        // PANTALLA DE DETALLE DE LIBRO
                         composable(AppScreen.BookDetail.route) {
                             BookDetailScreen(
                                 authViewModel = authViewModel,

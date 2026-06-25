@@ -54,7 +54,7 @@ fun UserQueryAuthorsScreen(
     val focusManager = LocalFocusManager.current
     var searchQuery by remember { mutableStateOf("") }
 
-    //  Cargar libros en tiempo real para derivar autores
+    // Cargar libros en tiempo real para derivar autores
     LaunchedEffect(Unit) {
         val database = FirebaseDatabase.getInstance().getReference("libros")
         val listener = object : ValueEventListener {
@@ -114,7 +114,7 @@ fun UserQueryAuthorsScreen(
                     .fillMaxSize()
                     .padding(horizontal = 16.dp, vertical = 8.dp)
             ) {
-                //  BARRA DE BÚSQUEDA
+                // BARRA DE BÚSQUEDA
                 Row(
                     modifier = Modifier.fillMaxWidth().padding(bottom = 12.dp),
                     verticalAlignment = Alignment.CenterVertically,
@@ -189,7 +189,7 @@ fun UserAuthorListItem(
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier.weight(1f)
             ) {
-                //  FOTO DE PERFIL DEL AUTOR (CIRCULAR)
+                // FOTO DE PERFIL DEL AUTOR (CIRCULAR)
                 if (author.imageUrl.isNotEmpty()) {
                     AsyncImage(
                         model = author.imageUrl,

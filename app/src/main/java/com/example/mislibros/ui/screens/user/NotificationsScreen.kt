@@ -110,7 +110,7 @@ fun NotificationsScreen(
         ) {
             Spacer(Modifier.height(16.dp))
 
-            // Botón "Limpiar todo" — solo si hay notificaciones
+            // Botón "Limpiar todo" solo si hay notificaciones
             if (notifications.isNotEmpty()) {
                 OutlinedButton(
                     onClick = {

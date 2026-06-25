@@ -117,7 +117,7 @@ fun AuthorDetailScreen(
                 ) {
                     Spacer(modifier = Modifier.height(24.dp))
 
-                    //  FOTO CIRCULAR DEL AUTOR GRANDE
+                    // FOTO CIRCULAR DEL AUTOR GRANDE
                     Column(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalAlignment = Alignment.CenterHorizontally
@@ -150,7 +150,7 @@ fun AuthorDetailScreen(
 
                         Spacer(modifier = Modifier.height(16.dp))
 
-                        // ️ NOMBRE DEL AUTOR
+                        // NOMBRE DEL AUTOR
                         Text(
                             text = author.name,
                             fontSize = 22.sp,
@@ -169,7 +169,7 @@ fun AuthorDetailScreen(
 
                     Spacer(modifier = Modifier.height(28.dp))
 
-                    //  SECCIÓN BIBLIOGRAFÍA
+                    // SECCIÓN BIBLIOGRAFÍA
                     Text(
                         text = "Bibliografía",
                         fontSize = 15.sp,
@@ -194,7 +194,7 @@ fun AuthorDetailScreen(
                         )
                     }
 
-                    //  SECCIÓN LIBROS DE ESTE AUTOR
+                    // SECCIÓN LIBROS DE ESTE AUTOR
                     Text(
                         text = "Libros de este Autor",
                         fontSize = 15.sp,

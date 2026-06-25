@@ -39,7 +39,7 @@ fun RegisterScreen(
     var fotoBitmap by remember { mutableStateOf<Bitmap?>(null) }
     var mostrarDialogoOrigen by remember { mutableStateOf(false) }
 
-    //  Lanzador para tomar foto con la cámara
+    // Lanzador para tomar foto con la cámara
     val camaraLauncher = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.TakePicturePreview()
     ) { bitmap ->
@@ -48,7 +48,7 @@ fun RegisterScreen(
         }
     }
 
-    // ️ Lanzador para seleccionar foto desde la galería
+    // Lanzador para seleccionar foto desde la galería
     val galeriaLauncher = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.PickVisualMedia()
     ) { uri: Uri? ->
@@ -66,7 +66,7 @@ fun RegisterScreen(
         }
     }
 
-    //  Lanzador para solicitar permiso de la cámara
+    // Lanzador para solicitar permiso de la cámara
     val permisoCamaraLauncher = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.RequestPermission()
     ) { esAceptado ->
@@ -118,7 +118,7 @@ fun RegisterScreen(
             },
             onCancelClick = { onBackToLoginClick() },
             fotoBitmap = fotoBitmap,
-            onFotoClick = { mostrarDialogoOrigen = true }, //  Activa el selector
+            onFotoClick = { mostrarDialogoOrigen = true }, // Activa el selector
             modifier = Modifier.padding(innerPadding)
         )
     }

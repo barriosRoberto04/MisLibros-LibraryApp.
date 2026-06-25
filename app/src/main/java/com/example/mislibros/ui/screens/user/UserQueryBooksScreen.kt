@@ -60,7 +60,7 @@ fun UserQueryBooksScreen(
     val focusManager = LocalFocusManager.current
     var searchQuery by remember { mutableStateOf("") }
 
-    //  CARGAR LIBROS EN TIEMPO REAL
+    // CARGAR LIBROS EN TIEMPO REAL
     LaunchedEffect(Unit) {
         val database = FirebaseDatabase.getInstance().getReference("libros")
         val listener = object : ValueEventListener {
@@ -96,7 +96,7 @@ fun UserQueryBooksScreen(
                     .fillMaxSize()
                     .padding(horizontal = 16.dp, vertical = 8.dp)
             ) {
-                //  BARRA DE BÚSQUEDA
+                // BARRA DE BÚSQUEDA
                 Row(
                     modifier = Modifier.fillMaxWidth().padding(bottom = 12.dp),
                     verticalAlignment = Alignment.CenterVertically,
@@ -184,7 +184,7 @@ fun UserBookListItem(
                 // El peso (weight) expande este contenedor y empuja las acciones a la derecha
                 modifier = Modifier.weight(1f)
             ) {
-                // ️ PORTADA
+                // PORTADA
                 if (book.imageUrl.isNotEmpty()) {
                     AsyncImage(
                         model = book.imageUrl,
@@ -229,7 +229,7 @@ fun UserBookListItem(
                 }
             }
 
-            //  BOTÓN SOLICITAR PRÉSTAMO
+            // BOTÓN SOLICITAR PRÉSTAMO
             IconButton(onClick = onLoan) {
                 Icon(
                     imageVector = Icons.Default.LibraryAdd,

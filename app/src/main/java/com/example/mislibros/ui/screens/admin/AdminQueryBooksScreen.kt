@@ -68,7 +68,7 @@ fun AdminQueryBooksScreen(
     val focusManager = LocalFocusManager.current
     var searchQuery by remember { mutableStateOf("") }
 
-    //  CARGAR LIBROS EN TIEMPO REAL
+    // CARGAR LIBROS EN TIEMPO REAL
     LaunchedEffect(Unit) {
         val database = FirebaseDatabase.getInstance().getReference("libros")
         val listener = object : ValueEventListener {
@@ -106,7 +106,7 @@ fun AdminQueryBooksScreen(
                         activeLoanCount = activeCount
                         showActiveLoanError = true
                     } else {
-                        //  Sin préstamos activos: proceder a eliminar
+                        // Sin préstamos activos: proceder a eliminar
                         val dbRef = FirebaseDatabase.getInstance()
                             .getReference("libros").child(book.bookId)
                         dbRef.removeValue().addOnSuccessListener {
@@ -135,7 +135,7 @@ fun AdminQueryBooksScreen(
             })
     }
 
-    //  DIÁLOGO DE CONFIRMACIÓN DE ELIMINACIÓN
+    // DIÁLOGO DE CONFIRMACIÓN DE ELIMINACIÓN
     if (bookToDelete != null) {
         AlertDialog(
             onDismissRequest = { bookToDelete = null },
@@ -181,7 +181,7 @@ fun AdminQueryBooksScreen(
         )
     }
 
-    //  DIÁLOGO DE ERROR — PRÉSTAMOS ACTIVOS
+    // DIÁLOGO DE ERROR PRÉSTAMOS ACTIVOS
     if (showActiveLoanError) {
         AlertDialog(
             onDismissRequest = { showActiveLoanError = false },
@@ -222,7 +222,7 @@ fun AdminQueryBooksScreen(
         )
     }
 
-    //  INDICADOR DE VERIFICACIÓN DE PRÉSTAMOS
+    // INDICADOR DE VERIFICACIÓN DE PRÉSTAMOS
     if (isCheckingLoans) {
         AlertDialog(
             onDismissRequest = {},
@@ -259,7 +259,7 @@ fun AdminQueryBooksScreen(
                     .fillMaxSize()
                     .padding(horizontal = 16.dp, vertical = 8.dp)
             ) {
-                //  BARRA DE BÚSQUEDA
+                // BARRA DE BÚSQUEDA
                 Row(
                     modifier = Modifier.fillMaxWidth().padding(bottom = 12.dp),
                     verticalAlignment = Alignment.CenterVertically,
@@ -283,7 +283,7 @@ fun AdminQueryBooksScreen(
                     }
                 }
 
-                //  FILTRADO Y ORDENAMIENTO
+                // FILTRADO Y ORDENAMIENTO
                 val filteredAndSortedList = remember(bookList, searchQuery) {
                     bookList
                         .filter { book ->
@@ -346,7 +346,7 @@ fun BookListItem(
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier.weight(1f)
             ) {
-                //  PORTADA
+                // PORTADA
                 if (book.imageUrl.isNotEmpty()) {
                     AsyncImage(
                         model = book.imageUrl,
@@ -391,7 +391,7 @@ fun BookListItem(
                 }
             }
 
-            // ⚙ ACCIONES
+            // ACCIONES
             Row(verticalAlignment = Alignment.CenterVertically) {
                 IconButton(onClick = onEdit) {
                     Icon(imageVector = Icons.Default.Edit, contentDescription = null, tint = YaleBlue)

@@ -101,7 +101,7 @@ fun InfoScreen(
                                 .padding(top = 4.dp, bottom = 24.dp)
                         )
 
-                        //  ¿Quiénes Somos?
+                        // ¿Quiénes Somos?
                         InfoSection(
                             title = "¿Quiénes Somos?",
                             content = "Somos una plataforma digital innovadora dedicada a conectar a lectores con el maravilloso mundo de los libros. Facilitamos la gestión y consulta de catálogos y préstamos de forma rápida y sencilla.",
@@ -111,7 +111,7 @@ fun InfoScreen(
 
                         Spacer(modifier = Modifier.height(20.dp))
 
-                        //  Misión
+                        // Misión
                         InfoSection(
                             title = "Misión",
                             content = "Fomentar el hábito de la lectura y el libre acceso a la información a través de una aplicación intuitiva y eficiente, simplificando la administración de bibliotecas y mejorando la experiencia de los usuarios.",
@@ -121,7 +121,7 @@ fun InfoScreen(
 
                         Spacer(modifier = Modifier.height(20.dp))
 
-                        // ️ Visión
+                        // Visión
                         InfoSection(
                             title = "Visión",
                             content = "Ser el software de gestión bibliotecaria de referencia en el ámbito escolar y comunitario, promoviendo el conocimiento y el desarrollo cultural mediante la digitalización de recursos.",
@@ -135,7 +135,7 @@ fun InfoScreen(
 
                         Spacer(modifier = Modifier.height(20.dp))
 
-                        //  Contacto Header
+                        // Contacto Header
                         Text(
                             text = "Contacto y Soporte",
                             fontSize = 16.sp,
