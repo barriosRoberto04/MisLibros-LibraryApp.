@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "226581808296",
+    "firebase_url": "https://pf-android-b127a-default-rtdb.firebaseio.com",
+    "project_id": "pf-android-b127a",
+    "storage_bucket": "pf-android-b127a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:226581808296:android:0395c8140d3eeb3de96e9d",
+        "android_client_info": {
+          "package_name": "com.example.mislibros"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "226581808296-thod42rc6pj8e4ijikbh1kkc3pkf7dqb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mislibros",
+            "certificate_hash": "8ddfe1fddc96cd4ca3fe0839c3fc6c7a8eb50c85"
+          }
+        },
+        {
+          "client_id": "226581808296-mmpl0n1uabtm4dah5p3sme30bh6m9gqm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBkWqfGiiaUwmJ6ZeaHVsIzFB8cic6goo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "226581808296-mmpl0n1uabtm4dah5p3sme30bh6m9gqm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

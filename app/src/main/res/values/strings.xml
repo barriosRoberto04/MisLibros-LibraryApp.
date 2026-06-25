@@ -1,0 +1,154 @@
+<resources>
+    <string name="app_name">MisLibros</string>
+
+    <!-- Login Content -->
+    <string name="logo_description">Logo Mis Libros</string>
+    <string name="welcome_back">¡Bienvenido de vuelta!</string>
+    <string name="login_subtitle">Ingresa tus credenciales para acceder</string>
+    <string name="email_label">Correo Electrónico</string>
+    <string name="password_label">Contraseña</string>
+    <string name="view_password">Ver Contraseña</string>
+    <string name="login_button">INICIAR SESIÓN</string>
+    <string name="social_separator"> o ingresa con </string>
+    <string name="google_logo_description">Google Logo</string>
+    <string name="github_logo_description">GitHub Logo</string>
+
+    <!-- Login Screen -->
+    <string name="no_account">¿No tienes cuenta?</string>
+    <string name="register_here">Regístrate aquí</string>
+
+    <!-- Register Screen Dialogs -->
+    <string name="select_photo_title">Seleccionar Fotografía</string>
+    <string name="select_photo_body">¿Desde dónde deseas añadir tu foto de perfil?</string>
+    <string name="camera_option">Cámara</string>
+    <string name="gallery_option">Galería</string>
+    <string name="camera_permission_denied">Permiso de cámara denegado</string>
+    <string name="image_load_error">Error al cargar la imagen</string>
+
+    <!-- Register Content Form -->
+    <string name="only_letters_warning">El campo %1$s solo permite letras</string>
+    <string name="create_account_title">Crear Cuenta</string>
+    <string name="photo_label">Foto</string>
+    <string name="personal_data_section">Datos Personales</string>
+    <string name="first_name_label">Nombre(s)</string>
+    <string name="last_name_paternal_label">Apellido Paterno</string>
+    <string name="last_name_maternal_label">Apellido Materno</string>
+    <string name="address_section">Dirección</string>
+    <string name="street_label">Calle</string>
+    <string name="num_exterior_label">Num Ext</string>
+    <string name="num_interior_label">Num Int</string>
+    <string name="neighborhood_label">Colonia</string>
+    <string name="municipality_label">Alcaldía o Municipio</string>
+    <string name="zip_code_label">Código Postal</string>
+    <string name="contact_info_section">Información de Contacto</string>
+    <string name="phone_label">Teléfono Celular</string>
+    <string name="security_section">Seguridad</string>
+    <string name="confirm_password_label">Confirmar Contraseña</string>
+    <string name="register_button">REGISTRARME</string>
+    <string name="cancel_button">CANCELAR</string>
+
+    <!-- Register Content Validations -->
+    <string name="add_photo_warning">Por favor, añade una foto de perfil</string>
+    <string name="fill_all_fields_warning">Por favor, llena todos los campos</string>
+    <string name="zip_code_length_warning">El Código Postal debe ser de 5 dígitos</string>
+    <string name="phone_length_warning">El teléfono celular debe tener 10 dígitos</string>
+    <string name="invalid_email_warning">Ingrese un correo válido</string>
+    <string name="password_length_warning">La contraseña debe tener mínimo 8 caracteres</string>
+    <string name="passwords_mismatch_warning">Las contraseñas no coinciden</string>
+
+    <!-- Admin Home Screen -->
+    <string name="admin_welcome">Administrador: %1$s</string>
+    <string name="notifications_desc">Notificaciones</string>
+    <string name="menu_register_user">Registrar Usuarios</string>
+    <string name="my_books">Mis Libros</string>
+    <string name="menu_register_user_desc">Dar de alta cuentas</string>
+    <string name="menu_query_user">Consultar Usuarios</string>
+    <string name="menu_query_user_desc">Editar, eliminar, bloquear</string>
+    <string name="menu_register_book">Dar de alta libros</string>
+    <string name="menu_register_book_desc">Añadir títulos</string>
+    <string name="menu_query_book">Consultar libros</string>
+    <string name="menu_query_book_desc">Editar y eliminar</string>
+    <string name="menu_register_loan">Registrar Préstamo</string>
+    <string name="menu_register_loan_desc">Alta de préstamos</string>
+    <string name="menu_query_loans">Consultar Préstamos</string>
+    <string name="menu_query_loans_desc">Control y devoluciones</string>
+    <string name="menu_reports">Subir Reporte</string>
+    <string name="menu_reports_desc">Subida de archivos</string>
+    <string name="bottom_profile">Mi Perfil</string>
+    <string name="bottom_logout">Cerrar Sesión</string>
+    <string name="bottom_back">Regresar</string>
+    <string name="bottom_info">Información</string>
+    <string name="bottom_home">Inicio</string>
+    <string name="menu_search_books">Buscar libros</string>
+    <string name="menu_request_book">Solicitar libros</string>
+    <string name="menu_user_report">Reportar</string>
+    <string name="menu_user_loans">Mis préstamos</string>
+    <string name="menu_courses">Cursos</string>
+    <string name="user_search_books_title">Buscar Libros</string>
+    <string name="info_dialog_title">Información y Preguntas Frecuentes</string>
+    <string name="info_dialog_body">Bienvenido al Sistema de Gestión de Biblioteca \"Mis Libros\".\n\nPreguntas Frecuentes:\n\n1. ¿Cómo dar de alta un libro?\nUtiliza el botón \"Dar de alta libros\" e ingresa los datos correspondientes.\n\n2. ¿Cómo registrar un préstamo?\nUtiliza \"Registrar Préstamo\" y asocia un usuario con un libro.\n\n3. ¿Cómo editar o suspender usuarios?\nEn \"Consultar Usuarios\" podrás ver la lista y presionar las opciones de edición o bloqueo.\n\nSoporte técnico: soporte@mislibros.com</string>
+    <string name="close_button">Cerrar</string>
+    <string name="coming_soon">Función disponible próximamente</string>
+    <string name="logout_success">Sesión cerrada con éxito</string>
+
+    <!-- AdminRegisterBookScreen -->
+    <string name="book_title_register">Alta de Nuevo Libro</string>
+    <string name="book_title_edit">Editar Datos del Libro</string>
+    <string name="book_photo_title">Portada del Libro</string>
+    <string name="book_photo_body">Selecciona el origen de la imagen para la portada</string>
+    <string name="book_photo_label">Portada</string>
+    <string name="book_section_main">Información Principal</string>
+    <string name="book_section_classification">Volumen y Clasificación</string>
+    <string name="book_label_title">Título del Libro</string>
+    <string name="book_label_author">Autor</string>
+    <string name="book_label_publisher">Editorial</string>
+    <string name="book_label_year">Año</string>
+    <string name="book_label_edition">Edición</string>
+    <string name="book_label_category">Categoría o Género</string>
+    <string name="book_label_language">Idioma</string>
+    <string name="book_label_pages">Páginas</string>
+    <string name="book_label_stock">Stock</string>
+    <string name="book_button_register">ALTA DE LIBRO</string>
+    <string name="book_button_save">GUARDAR CAMBIOS</string>
+    <string name="book_error_photo">Por favor, añade una portada para el libro</string>
+    <string name="book_error_category">Por favor, selecciona una categoría válida</string>
+    <string name="book_error_stock">La cantidad de ejemplares debe ser mayor a 0</string>
+
+    <!-- AdminQueryBooksScreen -->
+    <string name="book_query_title">Consultar Libros</string>
+    <string name="book_search_placeholder">Buscar libro por título</string>
+    <string name="book_no_registered">No hay libros registrados en el catálogo</string>
+    <string name="book_no_found">No se encontraron libros</string>
+    <string name="book_dialog_delete_title">¿Está seguro de eliminar este libro?</string>
+    <string name="book_dialog_delete_body">Esta acción lo borrará permanentemente del catálogo y de la base de datos</string>
+    <string name="book_delete_success">Libro eliminado de la base de datos</string>
+    <string name="book_status_available">Disponible</string>
+    <string name="book_status_loaned">Prestado</string>
+    <string name="book_status_maintenance">Mantenimiento</string>
+
+    <!-- UserProfileScreen -->
+    <string name="profile_title">Mi Perfil</string>
+    <string name="profile_section_personal">Datos Personales</string>
+    <string name="profile_section_address">Dirección</string>
+    <string name="profile_button_save">GUARDAR CAMBIOS</string>
+    <string name="profile_success_save">¡Perfil actualizado correctamente!</string>
+    <string name="profile_error_save">Error al guardar el perfil: %1$s</string>
+    <string name="profile_label_birthdate">Fecha de Nacimiento</string>
+
+    <!-- Reports System -->
+    <string name="menu_query_reports">Consultar Reportes</string>
+    <string name="report_submitted_success">Reporte subido exitosamente</string>
+    <string name="report_fields_error">Por favor, completa todos los campos obligatorios.</string>
+    <string name="report_letters_error">Los campos de nombre y apellidos solo deben contener letras.</string>
+    <string name="report_phone_error">El teléfono debe tener exactamente 10 dígitos.</string>
+    <string name="report_email_error">Ingresa un correo electrónico válido.</string>
+    <string name="report_subject_label">Asunto</string>
+    <string name="report_description_label">Descripción del Reporte</string>
+    <string name="report_submit_button">SUBIR REPORTE</string>
+    <string name="report_clear_button">LIMPIAR</string>
+    <string name="report_query_title">Consultar Reportes</string>
+    <string name="report_no_registered">No hay reportes registrados.</string>
+    <string name="report_dialog_title">Detalles del Reporte</string>
+    <string name="report_status_label">Estatus del Reporte</string>
+    <string name="default_web_client_id">226581808296-mmpl0n1uabtm4dah5p3sme30bh6m9gqm.apps.googleusercontent.com</string>
+</resources>
